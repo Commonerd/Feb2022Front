@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+<style> 
+	table, th, td {
+	border:1px solid #ccc;
+	}
+	td {
+		width:100px; /*셀 너비*/
+		height:30px; /*셀 높이*/
+		}
+	</style>
+</head>
+<body>
+<!--  2줄 4칸 테이블 생성 -->
+<table>
+	<colgroup>
+		<col><!-- 아무르처리도 안함 -->
+		<col style="background-color:red;">
+		<col span="2" style="background-color:green;">
+	</colgroup>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+	</tr>
+</table>
+</body>
+</html>
