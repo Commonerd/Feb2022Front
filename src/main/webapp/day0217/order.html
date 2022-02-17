@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 주문서 작성하기</title>
+	<style>
+		.container {
+			width:700px;
+			margin:0 auto;
+		}
+		ul { /* 순서없는 목록에 적용할 스타일 */
+			list-style-type: none; /* 불릿 없앰 */
+		}
+
+		label.title { /* class=title인 label에 적용할 스타일 */
+			font-weight: bold; /* 굵은 글자 */
+			width: 80px; /* 너비 80px */
+			float: left; /* 왼쪽부터 배치 */
+		}
+
+		div.centered { /* class=centered인 div에 적용할 스타일 */
+			text-align: center; /* 가운데 정렬 */
+		}
+
+		fieldset { /* 필드셋에 적용할 스타일*/
+			margin: 15px 10px; /* 상하 마진 15xp, 좌우 마진 10px */
+		}
+
+			fieldset legend { /* 필드셋의 제목 */
+				font-weight: bold; /* 굵은 글자 */
+				font-size: 18px; /* 글자 크기 18px */
+				color: purple; /* 글자색 자주 */
+			}
+
+		ul li { /* 목록의 각 항목 */
+			margin-bottom: 10px; /* 아래 마진 10px */
+		}
+	</style>	
+</head>
+<body>
+	<div class="container">
+		<!-- 내용 추가 -->
+		<h1>상품 주문서</h1>
+		<fieldset>
+		<legend>개인 정보</legend>
+		<label for="name"><strong>이름&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong></label>
+		<input type="text" id="name" placeholder="여백없이 입력"><br>
+		<p></p>
+		<label for="phone"><strong>연락처&nbsp&nbsp&nbsp</strong></label>
+		<input type="text" id="phone" placeholder="연락가능한 번호"><br>
+		</fieldset>
+		
+		<fieldset>
+		<legend>배송지 정보</legend>
+		<label for="address"><strong>주소</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+		<input type="text" name="address" id="address"><br>
+		<label for="tel"><strong>전화번호</strong>&nbsp</label>
+		<input type="text" name="tel" id="tel"><br>
+		<label for="memo"><strong>메모</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+		<textarea name="memo" cols="30" rows="2">
+		</textarea><br>
+		</fieldset>
+		
+		<fieldset>
+		<legend>주문 정보</legend>
+		<form>
+		<input type="checkbox" name="ga" value="ga" id="ga" width="300">
+		<label for="ga">과테말라 안티구아 (100g)&nbsp</label>
+		<input type="number" name="ga" id="ga" value="0" min="0">개<br>
+		<input type="checkbox" name="im" value="im" id="im">
+		<label for="im">인도네시아 만델링 (100g)&nbsp</label>
+		<input type="number" name="im" id="im" value="0" min="0">개<br>
+		<input type="checkbox" name="dd" value="dd" id="dd">
+		<label for="dd">탐라는도다(블렌딩) (100g</label>
+		<input type="number" name="im" id="im" value="0" min="0">개<br>
+		</form>
+		</fieldset>
+	</div>
+</body>
+</html>
