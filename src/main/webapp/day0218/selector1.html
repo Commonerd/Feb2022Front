@@ -12,13 +12,18 @@
 /* #first{color:red;} */
 /* li *{color:orange;} => 한 칸 띄우면 해당 태그의 하위 태그에 대해서 다음을 실행한다는 의미.*/
 li strong{color:orange;}
+/* #second > span{color:purple;} =>실행안됨 부등호는 바로 밑에 있는 자식태그만 가능하다*/
+/* #second span{color:purple;} =>실행됨*/
+#second em{color:purple;}
+#second + li{ color:teal;}/*+는 '바로' 밑에서 같은 레벨의 li태그를 찾고, 나랑 붙어있는 가장가까운 애에게 적용*/
+#second ~ li{ color:teal;}/*~은 '밑에서' 모든 형제 li태그를 찾아서 */
 
 </style>
 </head>
 <body>
 <ul>
 <li class="blue big" id="first">text <strong>text</strong> text text text text text</li>
-<li class="red big" id="second">text <em>text</em> text text text text text</li>
+<li class="red big" id="second">text <em><span>text</span> text</em> text text text text</li>
 <li class="blue" id="third">text text text text text text text</li>
 <li class="red" id="fourth">text text text text text text text</li>
 </ul>
