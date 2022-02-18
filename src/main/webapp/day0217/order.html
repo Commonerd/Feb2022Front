@@ -41,40 +41,63 @@
 	<div class="container">
 		<!-- 내용 추가 -->
 		<h1>상품 주문서</h1>
+		<form>
 		<fieldset>
 		<legend>개인 정보</legend>
-		<label for="name"><strong>이름&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong></label>
-		<input type="text" id="name" placeholder="여백없이 입력"><br>
-		<p></p>
-		<label for="phone"><strong>연락처&nbsp&nbsp&nbsp</strong></label>
-		<input type="text" id="phone" placeholder="연락가능한 번호"><br>
+		<ul>
+		<li>
+		<label for="uname" class="title">이름</label>
+		<input type="text" id="uname" name="name" placeholder="여백없이 입력" required><br>
+		</li>
+		<li>
+		<label for="tell" class="title">연락처</label>
+		<input type="text" id="tell" name="phone" placeholder="연락가능한 번호">
+		</li>
+		</ul>
 		</fieldset>
 		
 		<fieldset>
 		<legend>배송지 정보</legend>
-		<label for="address"><strong>주소</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-		<input type="text" name="address" id="address"><br>
-		<label for="tel"><strong>전화번호</strong>&nbsp</label>
-		<input type="text" name="tel" id="tel"><br>
-		<label for="memo"><strong>메모</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-		<textarea name="memo" cols="30" rows="2">
-		</textarea><br>
+		<ul>
+		<li>
+		<label for="addr" class="title">주소</label>
+		<input type="text" size="40" id="addr" name="addr" required>
+		</li>
+		<li>
+		<label for="tel2" class="title">전화번호</label>
+		<input type="tel" id="tel2" name="tel" required>
+		</li>
+		<li>
+		<label for="comment" class="title">메모</label>
+		<textarea cols="40" rows="3" name="memo" id="comment">
+		</textarea>
+		</li>
+		</ul>
 		</fieldset>
 		
 		<fieldset>
 		<legend>주문 정보</legend>
 		<form>
-		<input type="checkbox" name="ga" value="ga" id="ga" width="300">
-		<label for="ga">과테말라 안티구아 (100g)&nbsp</label>
-		<input type="number" name="ga" id="ga" value="0" min="0">개<br>
-		<input type="checkbox" name="im" value="im" id="im">
-		<label for="im">인도네시아 만델링 (100g)&nbsp</label>
-		<input type="number" name="im" id="im" value="0" min="0">개<br>
-		<input type="checkbox" name="dd" value="dd" id="dd">
-		<label for="dd">탐라는도다(블렌딩) (100g</label>
-		<input type="number" name="im" id="im" value="0" min="0">개<br>
-		</form>
+		<ul>
+		<li>
+		<label><input type="checkbox">과테말라 안티구아 (100g)</label>
+		<label><input type="number" name="antiqua" value="0" min="0" max="5">개</label>
+		</li>
+		<li>
+		<label><input type="checkbox">인도네시아 만델링 (100g)</label>
+		<label><input type="number" name="mandeling" value="0" min="0" max="5">개</label>
+		</li>
+		<li>
+		<label><input type="checkbox">탐라는도다(블렌딩) (100g)</label>
+		<label><input type="number" name="tamna" value="0" min="0" max="5">개</label>
+		</li>
+		</ul>
 		</fieldset>
+			<div class="centered">
+				<input type="submit" value="주문하기">
+				<input type="reset" value="다시 작성">
+			</div>
+		</form>
 	</div>
 </body>
 </html>
