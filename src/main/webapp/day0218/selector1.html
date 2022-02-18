@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector</title>
+<style>
+/* *{color:blue;} */
+/* 	li{color:blue;} */
+/* .blue{color: blue;}
+.red {	color: red;}	
+.big{	font-size: 3em;} */
+/* #first{color:red;} */
+/* li *{color:orange;} => 한 칸 띄우면 해당 태그의 하위 태그에 대해서 다음을 실행한다는 의미.*/
+li strong{color:orange;}
+
+</style>
+</head>
+<body>
+<ul>
+<li class="blue big" id="first">text <strong>text</strong> text text text text text</li>
+<li class="red big" id="second">text <em>text</em> text text text text text</li>
+<li class="blue" id="third">text text text text text text text</li>
+<li class="red" id="fourth">text text text text text text text</li>
+</ul>
+</body>
+</html>
