@@ -112,14 +112,17 @@
     <style>
         /* 첫 번째 탭 */
         input:nth-of-type(1) { display: none; }
+        /* nth란 요소의 순서. 인덱스의 순서를 갖고 찾아가는 셀렉터임. 괄호 안에 있는 건 인덱스번호. */
         input:nth-of-type(1) ~ div:nth-of-type(1) { display: none; }
+        /* 틸트(~)처리하면 위로는 안가고 아래로 찾는다 */
         input:nth-of-type(1):checked ~ div:nth-of-type(1) { display: block; }
 
         /* 두 번째 탭 */
         input:nth-of-type(2) { display: none; }
         input:nth-of-type(2) ~ div:nth-of-type(2) { display: none; }
         input:nth-of-type(2):checked ~ div:nth-of-type(2) { display: block; }
-
+		/*(2)가 checked되면 (1)이 checked가 아니기 때문에 기본값 none이 되어 안보이는 것 */
+        
         /* 탭 모양 구성 */
         section.buttons { overflow: hidden; }
         section.buttons > label { 
@@ -132,7 +135,7 @@
             text-align: center;
 
             /* 테두리 지정 */
-            box-sizing: border-box;
+            box-sizing: border-box; /*테두리까지 포함해서 100, 30 */
             border: 1px solid black;
 
             /* 색상 지정*/
@@ -154,7 +157,7 @@
             overflow: hidden;
             padding: 10px;
             border: 1px solid black;
-            border-top: none;
+            border-top: none; /*경계선 간 위 아래 겹치는 부분 없게 하기 위해 U자 모양 만드는 것임 */
         }
         .thumbnail {
             float: left;
@@ -168,7 +171,7 @@
             width: 120px;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; 
+            text-overflow: ellipsis; /*넘치는 부분이 있어도 줄 안바꾸고 말줄임표로 표시*/
         }
     </style>
     <!-- 푸터 -->
