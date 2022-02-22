@@ -5,12 +5,14 @@
  
     <!-- 초기화 -->
     <link href="http://fonts.googleapis.com/css?family=Henny+Penny" rel="stylesheet" type="text/css" />
+    <!-- *css 문서 양이 많거나 읽어올 문서가 많다면, 웹폰트는 import대신 link를 쓰는 게 나을 수도 있다는 설
+     -->
     <!-- 초기화 -->
     <style>
-        * { margin: 0; padding: 0; }
+        * { margin: 0; padding: 0; } /*=> 모든 태그에 대해서 */
         body { font-family: 'Times New Roman', serif; }
         li { list-style: none; }
-        a { text-decoration: none; }
+        a { text-decoration: none; } /* =>링크에 밑줄 안긋겠다. */
         img { border: 0; }
     </style>
     <!-- 헤더 -->
@@ -41,22 +43,28 @@
         #title {
             font-family: 'Henny Penny', cursive; 
         }
+   /*      => 폰트사이즈  h1, h2로 상속됨.*/ 
     </style>
     <!-- 메뉴(1) -->
     <style>
+    /*float를 적용할 태그의 부모태그에 overflow: hidden;을 지정 clear:both와 같음*/
         #main_gnb > ul { overflow: hidden; }
+    /* float 처리는 ul안에서만 적용됨. 밖으로 나가면 더 이상 적용되지  않음 */
         #main_gnb > ul > li { float: left; }
         #main_gnb > ul > li > a {
-            display: block;
+            display: block; /*block 또는 inline-block을 해줘야 패딩이 살아남 */
             padding: 2px 10px;
             border: 1px solid black;
-        }
-        #main_gnb > ul > li > a:hover {
+        }	
+        #main_gnb > ul > li > a:hover { 
+        /*앵커태그에 마우스커서가 올라갔을 때 메뉴의 색 바꿈 */
             background: black;
             color: white;
         }
         #main_gnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; }
+        /*같은 부모로 묶여있는 li태그 중에 첫 번째를 의미함 */
         #main_gnb > ul > li:last-child > a  { border-radius: 0 10px 10px 0; }
+    	/*같은 부모로 묶여있는 li태그 중에 마지막을 의미함 */
     </style>
     <!-- 메뉴(2) -->
     <style>
